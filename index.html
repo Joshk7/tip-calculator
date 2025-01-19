@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Tip calculator app</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <main>
+            <picture class="logo">
+                <img src="/images/logo.svg" alt="SPLITTER" />
+            </picture>
+            <section class="">
+                <form class="container">
+                    <div class="tip">
+                        <div class="tip__bill">
+                            <label class="tip__label" for="bill">Bill</label>
+                            <input
+                                class="bill__input"
+                                id="bill"
+                                name="bill"
+                                type="text"
+                                placeholder="0"
+                            />
+                        </div>
+                        <div class="tip__percent">
+                            <label class="tip__label">Select Tip %</label>
+                            <div class="percent__grid">
+                                <input
+                                    class="percent__grid--item"
+                                    id="five"
+                                    name="five"
+                                    type="button"
+                                    value="5%"
+                                />
+                                <input
+                                    class="percent__grid--item"
+                                    id="ten"
+                                    name="ten"
+                                    type="button"
+                                    value="10%"
+                                />
+                                <input
+                                    class="percent__grid--item"
+                                    id="fifteen"
+                                    name="fifteen"
+                                    type="button"
+                                    value="15%"
+                                />
+                                <input
+                                    class="percent__grid--item"
+                                    id="twentyfive"
+                                    name="twentyfive"
+                                    type="button"
+                                    value="25%"
+                                />
+                                <input
+                                    class="percent__grid--item"
+                                    id="fifty"
+                                    name="fifty"
+                                    type="button"
+                                    value="50%"
+                                />
+                                <input
+                                    class="percent__grid--item"
+                                    id="custom"
+                                    name="custom"
+                                    type="button"
+                                    value="Custom"
+                                />
+                            </div>
+                        </div>
+                        <div class="tip__people">
+                            <label class="tip__label" for="people"
+                                >Number of People</label
+                            >
+                            <input
+                                class="people__input"
+                                id="people"
+                                name="people"
+                                type="number"
+                                placeholder="0"
+                            />
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="amount__values">
+                            <div class="row">
+                                <div class="amount__label">
+                                    <p>Tip Amount</p>
+                                    <span>/ person</span>
+                                </div>
+                                <h2>$0.00</h2>
+                            </div>
+                            <div class="row">
+                                <div class="amount__label">
+                                    <p>Total</p>
+                                    <span>/ person</span>
+                                </div>
+                                <h2>$0.00</h2>
+                            </div>
+                        </div>
+                        <input class="reset"  type="submit" value="Reset" />
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">Your Name Here</a>.
+            </div>
+        </footer>
+    </body>
+</html>
