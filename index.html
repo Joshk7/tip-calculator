@@ -21,14 +21,15 @@
         />
 
         <link rel="stylesheet" href="/style.css" />
+        <script defer src="/script.js"></script>
     </head>
     <body>
         <main>
             <picture class="logo">
                 <img src="/images/logo.svg" alt="SPLITTER" />
             </picture>
-            <section class="">
-                <form class="container">
+            <section class="content">
+                <form id="tip-form" class="container">
                     <div class="tip">
                         <div class="tip__bill">
                             <label class="main__label" for="bill">Bill</label>
@@ -46,51 +47,54 @@
                                 <input
                                     class="percent__grid--item"
                                     id="five"
-                                    name="five"
+                                    name="percent"
                                     type="button"
                                     value="5%"
                                 />
                                 <input
                                     class="percent__grid--item"
                                     id="ten"
-                                    name="ten"
+                                    name="percent"
                                     type="button"
                                     value="10%"
                                 />
                                 <input
                                     class="percent__grid--item"
                                     id="fifteen"
-                                    name="fifteen"
+                                    name="percent"
                                     type="button"
                                     value="15%"
                                 />
                                 <input
                                     class="percent__grid--item"
                                     id="twentyfive"
-                                    name="twentyfive"
+                                    name="percent"
                                     type="button"
                                     value="25%"
                                 />
                                 <input
                                     class="percent__grid--item"
                                     id="fifty"
-                                    name="fifty"
+                                    name="percent"
                                     type="button"
                                     value="50%"
                                 />
                                 <input
                                     class="percent__grid--item"
                                     id="custom"
-                                    name="custom"
+                                    name="percent"
                                     type="button"
                                     value="Custom"
                                 />
                             </div>
                         </div>
                         <div class="tip__people">
-                            <label class="main__label" for="people"
-                                >Number of People</label
-                            >
+                            <div class="error__container">
+                                <label class="main__label" for="people"
+                                    >Number of People</label
+                                >
+                                <span class="people-error" aria-live="polite" id="people-error"></span>
+                            </div>
                             <input
                                 class="large__input people__input"
                                 id="people"
