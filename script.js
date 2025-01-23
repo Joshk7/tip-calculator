@@ -16,8 +16,7 @@ const dataIsValid = (data) => {
 
 
 const handleClick = (e) => {
-    e.preventDefault();
-    console.log(tipForm.elements);
+    
 }
 
 
@@ -27,9 +26,9 @@ const handleSubmit = (e) => {
 }
 
 const handleChange = (e) => {
-    // const data = Object.fromEntries(new FormData(e.target));
-    // dataIsValid(data);
-    console.log(e);
+    e.preventDefault();
+    const formData = Object.fromEntries(new FormData(tipForm));
+    console.log(formData);
 }
 
 percentages.forEach((button) => {
