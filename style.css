@@ -168,13 +168,22 @@ input {
 .percent__grid--item:focus {
     cursor: pointer;
     background: #9FE8DF;
+    outline: 2px solid var(--strong-cyan);
+}
+
+#custom {
+    background: var(--very-light-grayish-cyan);
+    color: var(--very-dark-cyan);
 }
 
 #custom:hover,
 #custom:focus {
     background: var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
-    outline: 2px solid var(--strong-cyan);
+}
+
+.clicked {
+    background: var(--strong-cyan) !important;
 }
 
 .amount {
@@ -237,6 +246,7 @@ h2 {
 .reset:focus {
     cursor: pointer;
     background: #9FE8DF;
+    outline: none;
 }
 
 footer {
