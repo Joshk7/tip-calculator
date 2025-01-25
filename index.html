@@ -34,10 +34,10 @@
                         <div class="tip__bill">
                             <label class="main__label" for="bill">Bill</label>
                             <input
-                                class="large__input bill__input"
+                                class="large__input bill"
                                 id="bill"
                                 name="bill"
-                                type="text"
+                                type="number"
                                 placeholder="0"
                             />
                         </div>
@@ -80,11 +80,11 @@
                                     value="50%"
                                 />
                                 <input
-                                    class="percent__grid--item"
+                                    class="percent__grid--item custom"
                                     id="custom"
                                     name="percent"
-                                    type="button"
-                                    value="Custom"
+                                    type="number"
+                                    placeholder="Custom"
                                 />
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                                 <span class="people-error" aria-live="polite" id="people-error"></span>
                             </div>
                             <input
-                                class="large__input people__input"
+                                class="large__input people"
                                 id="people"
                                 name="people"
                                 type="number"
@@ -123,7 +123,7 @@
                                 <h2>$0.00</h2>
                             </div>
                         </div>
-                        <input class="reset" type="submit" value="Reset" />
+                        <input class="reset" id="reset" name="reset" type="reset" placeholder="Reset" />
                     </div>
                 </form>
             </section>

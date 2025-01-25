@@ -112,12 +112,12 @@ input {
     outline: 2px solid var(--strong-cyan);
 }
 
-.bill__input {
+.bill {
     background: var(--very-light-grayish-cyan) url("/images/icon-dollar.svg") no-repeat left;
     background-position-x: 1.25rem;
 }
 
-.people__input {
+.people {
     background: var(--very-light-grayish-cyan) url("/images/icon-person.svg") no-repeat left;
     background-position-x: 1rem;
 }
@@ -127,8 +127,6 @@ input {
     flex-direction: column;
     row-gap: 0.375rem;
 }
-
-
 
 .tip__people {
     display: flex;
@@ -171,19 +169,34 @@ input {
     outline: 2px solid var(--strong-cyan);
 }
 
-#custom {
+.custom {
     background: var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
+    text-align: center;
 }
 
-#custom:hover,
-#custom:focus {
+.custom::placeholder {
+    color: var(--very-dark-cyan);
+    text-align: center;
+}
+
+.custom::placeholder:focus {
+    background-color: blue;
+}
+
+.custom:hover,
+.custom:focus {
     background: var(--very-light-grayish-cyan);
     color: var(--very-dark-cyan);
 }
 
 .clicked {
     background: var(--strong-cyan) !important;
+
+}
+
+.clicked #custom {
+    text-align: right;
 }
 
 .amount {
@@ -288,7 +301,7 @@ footer {
 @media screen and (min-width: 1024px) {
     .logo {
         padding: 0;
-        margin-bottom: 5.5rem;
+        /* margin-bottom: 5.5rem; */
     }
 
     .content {
