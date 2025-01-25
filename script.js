@@ -1,9 +1,9 @@
-const tipForm = document.getElementById("tip-form");
+const tipForm = document.querySelector("form");
 const percentages = tipForm.querySelectorAll("input[name=percent]");
 const numberInputs = tipForm.querySelectorAll("input[type=number]");
-const reset = tipForm.querySelector(".reset");
-const billInput = tipForm.querySelector(".bill");
-const peopleInput = tipForm.querySelector(".people");
+const reset = document.getElementById("reset");
+const billInput = document.getElementById("bill");
+const peopleInput = document.getElementById("people");
 
 var clicked;
 
@@ -14,22 +14,6 @@ const clearError = () => {
 const renderError = () => {
     console.log("error!")
 }
-
-// const handleChange = (e) => {
-//     const formData = {};
-//     const fields = tipForm.querySelectorAll("input");
-//     for (const field of fields) {
-//         formData[field.name] = field.value;
-//     }
-
-//     if (formData.bill && clicked && !formData.people) {
-//         renderError();
-//     } else {
-//         clearError();
-//     }
-
-//     console.log(formData);
-// }
 
 const digits = {
     '0': 0,
