@@ -128,10 +128,6 @@ const calculateTotal = (bill, people) => {
     return total.toFixed(2);
 };
 
-const handleBillInput = (e) => {
-    disableButton();
-}
-
 const handleRadioClick = (e) => {
     resetCustom();
     resetPercentButtons();
@@ -151,14 +147,6 @@ const handleCustomClick = (e) => {
     custom.classList.toggle("outlined");
 };
 
-const handleCustomInput = (e) => {
-    disableButton();
-};
-
-const handlePeopleInput = (e) => {
-    disableButton();
-};
-
 const handleResetClick = (e) => {
     billInput.value = "";
     resetPercentButtons();
@@ -171,6 +159,7 @@ const handleResetClick = (e) => {
 };
 
 const handleFormInput = (e) => {
+    disableButton();
     const { bill, percent, people } = formData();
     const valid = validate(bill, people);
     if (bill === 0) {
@@ -188,17 +177,12 @@ const handleFormInput = (e) => {
     }
 }
 
-billInput.addEventListener("input", handleBillInput);
-
 percentageLabels.forEach((button) => {
     button.addEventListener("click", handleRadioClick);
     button.addEventListener("keypress", handleRadioKeypress);
 });
 
 custom.addEventListener("click", handleCustomClick);
-custom.addEventListener("input", handleCustomInput);
-
-peopleInput.addEventListener("input", handlePeopleInput);
 
 reset.addEventListener("click", handleResetClick);
 
