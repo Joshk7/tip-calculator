@@ -70,7 +70,7 @@
                                 type="radio"
                                 value="0.15"
                             />
-                            <label class="percentage__label clicked" for="fifteen"
+                            <label class="percentage__label" for="fifteen"
                                 >15%</label
                             >
                             <input
@@ -103,10 +103,10 @@
                         </fieldset>
                         <fieldset class="people">
                             <legend>
-                                <p>Number of People</p><span class="error">Can't be zero</span>
+                                <p>Number of People</p><span id="error" class="error invisible">Can't be zero</span>
                             </legend>
                             <input
-                                class="people__input error__input"
+                                class="people__input"
                                 type="number"
                                 name="people"
                                 id="people"
@@ -129,10 +129,10 @@
                                 <p class="p1">Total Amount</p>
                                 <p class="p2">/ person</p>
                             </div>
-                            <span class="total__amount">$0.00</span>
+                            <span id="total" class="total__amount">$0.00</span>
                         </div>
                     </div>
-                    <button id="reset" class="reset">Reset</button>
+                    <button id="reset" disabled class="reset">Reset</button>
                 </div>
             </section>
         </main>

@@ -30,6 +30,17 @@ select {
     font: inherit;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    overflow-wrap: break-word;
+}
+
 /* These are to get rid of the buttons on the number input */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -43,7 +54,7 @@ input[type="number"] {
 :root {
     /* Primary */
     --strong-cyan: hsl(172, 67%, 45%);
-    --error: #E17457;
+    --error: #e17457;
     /* Neutral */
     --very-dark-cyan: hsl(183, 100%, 15%);
     --dark-grayish-cyan: hsl(186, 14%, 43%);
@@ -56,7 +67,6 @@ input[type="number"] {
 html {
     height: 100%;
 }
-
 
 body {
     min-height: 100vh;
@@ -121,7 +131,7 @@ legend {
     flex-wrap: wrap;
 }
 
-input[type=number] {
+input[type="number"] {
     width: 100%;
     border: none;
     border-radius: 0.3125rem;
@@ -132,13 +142,13 @@ input[type=number] {
     caret-color: var(--strong-cyan);
 }
 
-input[type=number]::placeholder {
+input[type="number"]::placeholder {
     color: var(--grayish-cyan);
     opacity: 0.5;
 }
 
-input[type=number]:hover,
-input[type=number]:focus {
+input[type="number"]:hover,
+input[type="number"]:focus {
     outline: 0.125rem solid var(--strong-cyan);
     cursor: pointer;
 }
@@ -154,8 +164,8 @@ input[type=number]:focus {
 .bill::before,
 .people::before {
     position: absolute;
-	top: 0.25rem;
-	left: 1rem;
+    top: 0.25rem;
+    left: 1rem;
     z-index: 1;
 }
 
@@ -188,7 +198,7 @@ input[type=number]:focus {
 
 .percentage__label:hover,
 .percentage__label:focus {
-    background: #9FE8DF;
+    background: #9fe8df;
     color: var(--very-dark-cyan);
     cursor: pointer;
 }
@@ -232,6 +242,8 @@ input[type=number]:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
 }
 
 .p1 {
@@ -247,9 +259,12 @@ input[type=number]:focus {
 }
 
 .total__amount {
+    margin-left: auto;
+    text-align: right;
     font-size: 2rem;
     font-weight: bold;
     color: var(--strong-cyan);
+    max-width: 100%;
 }
 
 .reset {
@@ -266,10 +281,18 @@ input[type=number]:focus {
 
 .reset:hover,
 .reset:focus {
-    background: #9FE8DF;
+    background: #9fe8df;
     cursor: pointer;
 }
 
+.reset:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.reset:disabled:hover {
+    background: var(--strong-cyan);
+}
 
 footer {
     display: none;
@@ -292,14 +315,21 @@ footer {
     color: var(--very-dark-cyan);
 }
 
+.outlined {
+    outline: 0.125rem solid var(--strong-cyan);
+}
+
 .error {
-    /* display: none; */
     color: var(--error);
 }
 
 .error__input {
     outline: 0.125rem solid var(--error) !important;
     caret-color: var(--error) !important;
+}
+
+.invisible {
+    display: none;
 }
 
 @media screen and (min-width: 40rem) {
