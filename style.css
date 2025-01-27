@@ -97,6 +97,7 @@ header {
     flex-direction: column;
     row-gap: 1.5rem;
     column-gap: 2rem;
+    box-shadow: 0 2rem 2.6875rem 0 #4FA6AF33;
 }
 
 .left {
