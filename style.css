@@ -122,7 +122,6 @@ legend {
 }
 
 .percent legend {
-    grid-column: 1 / -1;
     width: 100%;
     margin-bottom: 1rem;
 }
@@ -180,7 +179,7 @@ input[type="number"]:focus {
     content: url("/images/icon-person.svg");
 }
 
-.percent {
+.percent__grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
